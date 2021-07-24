@@ -1,52 +1,67 @@
+# C30SF (中文名：三十秒前端)
 
-# Q-table-list (formerly known as threestars Linux)
+#### 参与贡献
 
-Participation and contribution
+1. fork本仓库
 
-Fork warehouse
+2. 长期参与开发目前在issue和pr进行
 
-Long term participation in development is currently in issue
+3.欢迎pr
 
-Latest edition: q-table-list parsing
+#### 最新版本(Latest edition)：C30SF  alpha ing
 
-Threestars A20 will be retained for the time being. PS in old folder: because I am not familiar with JS + HTML + CSS, I may submit code unrelated to this project during development and store it in ing folder
+满足开发 学习的前端代码片段，适合业余爱好者，初学者，专业开发者及设计师。
 
-brief introduction
+#### 特点
 
-The front-end Table + list component extension project is suitable for developers, users who can't program but have strong learning ability, and users with strong hands-on ability. Extensible, customizable, and can be integrated into other projects.
+#### 功能
 
-characteristic
+- [ ] css动画片段
+- [ ] 代码图形解析
+- [ ] 上传功能
+- [ ] 图表片段
+- [ ] 地图片段
+- [ ] 图形化代码修改
+- [ ] 代码编辑
 
-Installation tutorial
-
-Coming soon
-
-instructions
-
-Coming soon
-
-# Q-table-list (原名threestars-linux) (中文名：Q双表)
-
-参与贡献
-
-fork本仓库
-
-长期参与开发目前在issue进行
-
-最新版本(Latest edition)：Q-table-list alpha ing
-
-threestars A20暂时也会保留。存在old文件夹中 ps:由于我对js+html+css不熟，因此开发期间可能会提交与本项目无关的代码，存在ing文件夹中
-
-简介
-
-前端table表格+list列表组件扩展项目，适合开发者，不会编程的但学习能力较强的用户，动手能力较强的用户。可扩展，可定制，可集成到其他项目。
-
-特点
-
-安装教程
+ 
+#### 安装教程
 
 敬请期待
 
-使用说明
 
-敬请期待
+# C30sf (Chinese Name: 30s front end)
+
+#### Participation contribution
+
+1. Fork this project
+
+2. Long term participation in development is currently carried out in issue and PR
+
+3. Welcome pr
+
+#### Latest edition: c30sf alpha ing
+
+Meet the development and learning of front-end code fragments, suitable for amateurs, beginners, professional developers and designers.
+
+#### Characteristics
+
+#### Function
+
+-[] CSS animation clip
+
+-[] code graphics analysis
+
+-[] upload function
+
+-[] chart segment
+
+-[] map clip
+
+-[] graphical code modification
+
+-[] code editing
+
+#### Installation tutorial
+
+Coming soon

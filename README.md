@@ -48,19 +48,19 @@ Meet the development and learning of front-end code fragments, suitable for amat
 
 #### Function
 
--[] CSS animation clip
+- [ ] CSS animation clip
 
--[] code graphics analysis
+- [ ] code graphics analysis
 
--[] upload function
+- [ ] upload function
 
--[] chart segment
+- [ ] chart segment
 
--[] map clip
+- [ ] map clip
 
--[] graphical code modification
+- [ ] graphical code modification
 
--[] code editing
+- [ ] code editing
 
 #### Installation tutorial
 

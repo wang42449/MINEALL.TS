@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <!--<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>-->
+    <title>你的代码片段名称</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="full-screen" content="yes" />
+    <!--UC强制全屏-->
+    <meta name="browsermode" content="application" />
+    <!--UC应用模式-->
+    <meta name="x5-fullscreen" content="true" />
+    <!--QQ强制全屏-->
+    <meta name="x5-page-mode" content="app" />
+    <!--QQ应用模式-->
+    
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <!-- 引入 layui.css -->
+<link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css">
+      <style>
+      body {
+  background-color: aliceblue;
+  background-image: url(../back.png);
+  background-size: cover;
+  -moz-background-size: cover; /* 老版本的 Firefox */
+  background-repeat: no-repeat;
+  margin: 0px;
+  padding: 0px;
+  background-attachment: fixed;
+  background-position: center 0;
+  min-height: 100vh;
+}
+          .layui-collapse {
+              background-color: rgba(255, 255, 255, 0.6);
+          }
+      </style>
+    </head>
+    <body>
+        <ul class="layui-nav layui-bg-green" lay-filter="">
+      <li class="layui-nav-item layui-show-xs-inline-block" lay-header-event="menuLeft">
+        <a href="../index.html"> <i id="leftEnumIcon" class="layui-icon layui-icon-home">首页</i></a>
+        </li>
+        <li class="layui-nav-item layui-show-xs-inline-block" lay-header-event="menuLeft" style='float:right;'>
+          <a href="../index2.html">片段<i id="leftEnumIcon" class="layui-icon layui-icon-fonts-code"></i></a>
+        </li>
+    </ul>
+        <div class="layui-tab">
+  <ul class="layui-tab-title">
+    <li class="layui-this">预览</li>
+    <li>源码</li>
+    <li>详解</li>
+    
+  </ul>
+  <div class="layui-tab-content">
+    <div class="layui-tab-item layui-show"><div class="layui-container"> 
+     <div class="layui-row">
+            <div class="layui-col-xs12">你的代码片段效果</div></div></div></div>
+    <div class="layui-tab-item"><div class="layui-container"> 
+     <div class="layui-row">
+            <div class="layui-col-xs12">
+                <pre class="layui-code" lay-lang="HTML" lay-encode="true">
+                &lt;!--你的代码片段--&gt;
+                  &lt;!--需要引入layui。--&gt;   
+                
+              
+    </pre> 
+         </div>
+                         </div>
+                        </div></div>
+    <div class="layui-tab-item"><div class="layui-container"> 
+     <div class="layui-row">
+         <div class="layui-col-xs12">
+         <div class="layui-collapse">
+  <div class="layui-colla-item">
+    <h2 class="layui-colla-title">引入layui</h2>
+    <div class="layui-colla-content layui-show">
+        <h3>
+            cdn引入layui,创建index.html和index.js。
+        </h3>
+        <pre class="layui-code" lay-lang="HTML" lay-encode="true" lay-title="index.html">
+        &lt;head&gt;
+        &lt;!--index.html的内容（index.html和index.js在同一文件夹情况下。）--&gt;
+               &lt;link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css"&gt;
+               &lt;/head&gt;
+               &lt;body&gt;
+               &lt;script src="//unpkg.com/layui@2.6.8/dist/layui.js"&gt;&lt;/script&gt;
+               &lt;layui.config({
+            base: '/' //你的index.js所在位置
+          }).use('index'); //加载index.js&gt;
+          &lt;/body&gt;
+    </pre>
+        <pre class="layui-code" lay-lang="JavaScript" lay-encode="true" lay-title="index.js">
+        /**
+  index.js 项目 JS 主入口
+  以依赖 layui 的 layer 和 form 模块为例
+**/
+
+layui.define(["layer", "form", "code", "element"], function (exports) {
+  var layer = layui.layer,
+    form = layui.form,
+    code = layui.code,
+    element = layui.element;
+
+  layer.msg("Hello，欢迎");
+
+  exports("index", {}); //注意，这里是模块输出的核心，模块名必须和 use 时的模块名一致
+});
+//这是index.js的内容，如果在运行inde.html出现“Hello，欢迎”证明引入成功。
+        </pre>
+      <h3>
+          本地引入
+        </h3>
+        <a href="https://www.layui.com/" class="layui-btn">下载layui包</a>
+        <h3>
+            index.js内容不用改动，index.html内容如下。
+        </h3>
+         <pre class="layui-code" lay-lang="HTML" lay-encode="true" lay-title="index.html">
+        &lt;head&gt;
+        &lt;!--index.html的内容（index.html和index.js在同一文件夹情况下，layui文件在主目录里的layui文件夹。）--&gt;
+               &lt;link rel="stylesheet" href="./layui/css/layui.css""&gt;&lt;!--href后面是你的layui文件的位置。--&gt;
+               &lt;/head&gt;
+               &lt;body&gt;
+               &lt;script src="./layui/layui.js"&gt;&lt;/script&gt;&lt;!--src后面是你的layui文件位置。--&gt;
+               &lt;layui.config({
+            base: '/' //你的index.js所在位置
+          }).use('index'); //加载index.js&gt;
+          &lt;/body&gt;
+    </pre>
+      </div>
+  </div>
+             
+ <!--以下4行为一个栏目，可以把它复制粘贴进行添加栏目。-->            
+  <div class="layui-colla-item">
+    <h2 class="layui-colla-title">你的代码详解标题</h2>
+    <div class="layui-colla-content layui-show">你的代码详解内容</div>
+  </div>
+  <!--到这里结束-->
+
+             </div></div></div></div></div>
+    
+  </div>
+</div>
+    
+        <script src="./layui/layui.js"></script>
+      <!-- 引入 layui.js -->
+      <script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>
+      <script>
+          layui.config({
+            base: '/' //你存放新模块的目录，注意，不是 layui 的模块目录
+          }).use('info'); //加载入口
+          </script> 
+        <script>
+          layui.use('code', function(){ //加载code模块
+  layui.code({
+    elem: 'pre',
+    
+    encode: 'true',
+    
+  }); //引用code方法
+});
+</script>
+        
+    </body>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <!--<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>-->
+    <title>C30S代码片段</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="full-screen" content="yes" />
+    <!--UC强制全屏-->
+    <meta name="browsermode" content="application" />
+    <!--UC应用模式-->
+    <meta name="x5-fullscreen" content="true" />
+    <!--QQ强制全屏-->
+    <meta name="x5-page-mode" content="app" />
+    <!--QQ应用模式-->
+    
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <!-- 引入 layui.css -->
+<link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css">
+      <style>
+      body {
+  background-color: aliceblue;
+  background-image: url(./back.png);
+  background-size: cover;
+  -moz-background-size: cover; /* 老版本的 Firefox */
+  background-repeat: no-repeat;
+  margin: 0px;
+  background-attachment: fixed;
+  background-position: center 0;
+  min-height: 100vh;
+}
+    .layui-btn-fluid {
+  background-color: rgba(255, 255, 255, 0.6);
+  min-height: 260px;
+  border-width: 5px;
+  border-color: white;
+  border-radius: 25px;
+}  
+      </style>
+    </head>
+    <body>
+        <ul class="layui-nav layui-bg-green" lay-filter="">
+      <li class="layui-nav-item layui-show-xs-inline-block" lay-header-event="menuLeft">
+        <a href="./index.html"> <i id="leftEnumIcon" class="layui-icon layui-icon-home">首页</i></a>
+        </li>
+        <li class="layui-nav-item layui-show-xs-inline-block" lay-header-event="menuLeft" style='float:right;'>
+          <a href="./index2.html">片段<i id="leftEnumIcon" class="layui-icon layui-icon-fonts-code"></i></a>
+        </li>
+    </ul>
+    <div style="padding: 8vh;"></div>
+        <div class="layui-container"> 
+     <div class="layui-row layui-col-space10">
+            <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 layui-col-lg6 ">
+                <a href="./snippets/abutton.html"><button class="layui-btn-fluid"><h1>LayUI</h1><br><h3>顶部划入按钮</h3></button></a>
+         </div>
+         
+         <!--以下是贡献代码片段方式，按照这个模式把<a href="你的html文件链接">换成你的html文件链接，详情看README.md-->
+          <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 layui-col-lg6 ">
+              <a href="./snippets/navleftright.html"><button class="layui-btn-fluid"><h1>LayUI</h1><br><h3>导航栏的按钮居左右两端</h3></button>
+              </a>
+                  </div>
+         <!--到这里结束，可以把以上这些进行复制粘贴,需要在<h1>和</h1>之间写上所处的类别，如某个组件库，或某个语言，
+综合可以用如web等名称代替，我会在README.md写上目前有的类别，如果你的片段在这些
+类别里，请用已公布的类别。还需要在<h3>和</h3>之间写上你的代码片段是什么，这里只收有视觉效果的前端代码片段。-->
+            
+        <!--请在这里贡献代码-->    
+            
+            
+            </div>
+            </div>
+                <script src="./layui/layui.js"></script>
+      <!-- 引入 layui.js -->
+      <script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>
+      <script>
+          layui.config({
+            base: '/' //你存放新模块的目录，注意，不是 layui 的模块目录
+          }).use('info'); //加载入口
+          </script> 
+    </body>

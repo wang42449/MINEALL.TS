@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <!--<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>-->
+    <title>30秒前端</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="full-screen" content="yes" />
+    <!--UC强制全屏-->
+    <meta name="browsermode" content="application" />
+    <!--UC应用模式-->
+    <meta name="x5-fullscreen" content="true" />
+    <!--QQ强制全屏-->
+    <meta name="x5-page-mode" content="app" />
+    <!--QQ应用模式-->
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <!-- 引入 layui.css -->
+<link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css">
+<link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+    <script src="https://unpkg.com/video.js/dist/video.js"></script>
+    <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+    <!-- videojs-contrib-hls 用于在电脑端播放 如果只需移动端播放可以不引入 -->
+</head>
+  <body>
+    <ul class="layui-nav layui-bg-green" lay-filter="">
+      <li class="layui-nav-item layui-show-xs-inline-block" lay-header-event="menuLeft">
+        <a href="./index.html"> <i id="leftEnumIcon" class="layui-icon layui-icon-home">首页</i></a>
+        </li>
+        <li class="layui-nav-item layui-show-xs-inline-block" lay-header-event="menuLeft" style='float:right;'>
+          <a href="./index2.html">片段<i id="leftEnumIcon" class="layui-icon layui-icon-fonts-code"></i></a>
+        </li>
+    </ul>
+    <div style="padding: 8vh;"></div>
+
+     <div class="layui-container"> 
+     <div class="layui-row">
+            <div class="layui-col-xs12">
+              <button class="layui-btn-fluid"><img src="./logo2.PNG"><br><h1>C30S</h1><br><h3>有图形界面预览的前端代码片段集合</h3></button>
+              <div style="padding: 4vh;"></div>
+              <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                <ul class="layui-tab-title">
+                  
+                  <li class="layui-this">效果</li>
+                  <li>源码</li>
+                </ul>
+                <div class="layui-tab-content">
+                  <div class="layui-tab-item layui-show">
+<video id="myVideo" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" data-setup='{}'
+       style='width: 100%;height: auto;padding-bottom:55%;'>
+        <source id="source" src="https://vod.bunediy.com/20210723/9joxw1hB/index.m3u8" type="application/x-mpegURL">
+        </source>
+                      </video>     
+        </div>
+                
+                  <div class="layui-tab-item">
+    <pre class="layui-code" lay-lang="HTML" lay-encode="true" lay-height="350px">
+      &lt;!--以下可以放在&lt;body&gt;和&lt;/body&gt;之间,如果布局时包括它，
+      则放在要布局的&lt;div&gt;&lt;/div&gt;内source后面的src所对应的是视频地址连接，可以替换。--&gt;
+        &lt;video id="myVideo" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="meta" data-setup='{}' style='width: 100%; max-height: auto;'&gt;
+         &lt;source id="source" src="https://vod.bunediy.com/20210723/9joxw1hB/index.m3u8" type="application/x-mpegURL"&gt;
+         &lt;/source&gt;
+         &lt;/video&gt;  
+         &lt;!--一下最好放在&lt;body&gt;&lt;/body&gt;之间--&gt;
+         &lt;script&gt;
+          var player = videojs("video", {
+         autoplay: false,
+    });
+
+  var myVideo = videojs('myVideo', {
+    bigPlayButton: true,
+    textTrackDisplay: false,
+    posterImage: false,
+    errorDisplay: false,
+  })
+  myVideo.play()
+  var changeVideo = function(vdoSrc) {
+    if (/\.m3u8$/.test(vdoSrc)) {
+      myVideo.src({
+        src: vdoSrc,
+        type: 'application/x-mpegURL'
+      })
+    } else {
+      myVideo.src(vdoSrc)
+    }
+    myVideo.load();
+    myVideo.play();
+  }
+  &lt;/script&gt;           
+    </pre>
+                 
+  </div>
+  
+</div>
+
+
+                </div>
+      
+                <!--下面是布局时使用的div标签-->
+                <div style="padding: 4vh;"></div>
+                <a href="index2.html"><button class="layui-btn-fluid"><h1>开始探索(点击这里)</h1></button></a>
+          </div>
+      </div>
+     
+      <script src="./layui/layui.js"></script>
+      <!-- 引入 layui.js -->
+      <script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>
+      <script>
+          layui.config({
+            base: '/' //你存放新模块的目录，注意，不是 layui 的模块目录
+          }).use('index'); //加载入口
+          </script>
+          <script>
+          layui.use('code', function(){ //加载code模块
+  layui.code({
+    elem: 'pre',
+    title: 'HTML',
+    encode: 'true',
+    height: '350px'
+  }); //引用code方法
+});
+</script>
+<script>
+  var player = videojs("video", {
+         autoplay: false,
+    });
+
+  var myVideo = videojs('myVideo', {
+    bigPlayButton: true,
+    textTrackDisplay: false,
+    posterImage: false,
+    errorDisplay: false,
+  })
+  myVideo.play()
+  var changeVideo = function(vdoSrc) {
+    if (/\.m3u8$/.test(vdoSrc)) {
+      myVideo.src({
+        src: vdoSrc,
+        type: 'application/x-mpegURL'
+      })
+    } else {
+      myVideo.src(vdoSrc)
+    }
+    myVideo.load();
+    myVideo.play();
+  }
+</script>
+</body>
+</html>
+
